@@ -12,7 +12,7 @@ const Twitter = new twit(config);
 let retweet = function() {
   let params = {
     q: 'katespade, anthonybourdain',
-    result_type: 'popular',
+    result_type: 'recent',
     lang: 'en'
   }
 
