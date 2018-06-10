@@ -11,14 +11,14 @@ const Twitter = new twit(config);
 
 let retweet = function() {
   let params = {
-    q: 'katespade, anthonybourdain',
-    result_type: 'recent',
+    q: 'katespade OR anthonybourdain OR depression',
+    result_type: 'mixed',
     lang: 'en'
   }
 
   Twitter.get('search/tweets', params, function(err,data) {
     if (!err) {
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 4; i++) {
         let rtId = data.statuses[i].id_str;
         Twitter.post('statuses/retweet/:id', {
           id: rtId
