@@ -37,5 +37,5 @@ let retweet = function() {
     }
   });
 }
-retweet();
+// retweet();
 // setInterval(retweet, 28800000);
